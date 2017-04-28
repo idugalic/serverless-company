@@ -8,5 +8,5 @@
 ![MVC](assets/2.png?raw=true)
 
 +++
-### MVC maps to AWS
+### MVC and FaaS
 ![MVC - Serverless](assets/3.png?raw=true)
