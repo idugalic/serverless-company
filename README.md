@@ -1,4 +1,4 @@
-# serverless-company [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
+# [projects](http://idugalic.github.io/projects)/serverless-company [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
 CQRS. Eventsourcing. Microservices. Serverless. FaaS. Spring Boot. Spring Cloud Stream. Apache OpenWhisk
 
 ## References and further reading
