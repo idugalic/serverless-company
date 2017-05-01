@@ -23,3 +23,5 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 - https://github.com/krook
 - [Functions as a Service (FaaS) with Docker swarm](http://blog.alexellis.io/functions-as-a-service)
 - https://medium.com/@pfernandom/serverless-for-private-clouds-or-managing-the-server-for-a-serverless-app-f9321e45a910
+- https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/
+
