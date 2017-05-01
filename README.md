@@ -10,3 +10,4 @@ CQRS. Eventsourcing. Microservices. Serverless. FaaS. Spring Boot. Spring Cloud 
 - http://openwhisk.org/
 - https://github.com/krook
 - [Functions as a Service (FaaS) with Docker swarm](http://blog.alexellis.io/functions-as-a-service)
+- https://medium.com/@pfernandom/serverless-for-private-clouds-or-managing-the-server-for-a-serverless-app-f9321e45a910
