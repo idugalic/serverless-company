@@ -3,14 +3,19 @@
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
 The best known vendor host is currently [AWS Lambda](https://aws.amazon.com/lambda/). AWS Lambda is excelent service and I advise you to try it. Here, we will focus on open source solutions with the possibility of a private-cloud infrastructure instalation.
+
+Important attributes of serverless are:
+
+ - No management of server hosts or processes
+ - Self auto provision & auto-scale based on load
+ - Costs based on actual, precise, usage
  
 Some of existing projects out there are [Apache/IBM OpenWhisk](http://openwhisk.org/), [IronFunctions](https://github.com/iron-io/functions) and [GalacticFog](http://www.galacticfog.com/). We will focus on the OpenWhisk.
 
+
 ## OpenWhisk
+
 Apache OpenWhisk is a serverless, open source cloud platform that executes functions in response to events at any scale. Browse the [documentation](https://github.com/openwhisk/openwhisk) for more information.
-
-
-
 
 
 ## References and further reading
