@@ -10,8 +10,6 @@ Important attributes of serverless are:
  - Self auto provision & auto-scale based on load
  - Costs based on actual, precise, usage
  
-Some of existing projects out there are [Apache/IBM OpenWhisk](http://openwhisk.org/), [IronFunctions](https://github.com/iron-io/functions) and [GalacticFog](http://www.galacticfog.com/). We will focus on the OpenWhisk.
-
 
 ## OpenWhisk
 
@@ -29,4 +27,6 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 - [Functions as a Service (FaaS) with Docker swarm](http://blog.alexellis.io/functions-as-a-service)
 - https://medium.com/@pfernandom/serverless-for-private-clouds-or-managing-the-server-for-a-serverless-app-f9321e45a910
 - https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/
+- https://github.com/anaibol/awesome-serverless
+- https://github.com/lambci/docker-lambda
 
