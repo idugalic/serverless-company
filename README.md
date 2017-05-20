@@ -15,6 +15,10 @@ Important attributes of serverless are:
 
 Apache OpenWhisk is a serverless, open source cloud platform that executes functions in response to events at any scale. Browse the [documentation](https://github.com/openwhisk/openwhisk) for more information.
 
+## Slides
+
+<iframe width='770' height='515' src='https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white' frameborder='0' allowfullscreen></iframe>
+
 
 ## References and further reading
 
