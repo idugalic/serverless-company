@@ -1,8 +1,10 @@
 # [projects](http://idugalic.github.io/projects)/serverless-company [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
 
+This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. Focus is on the Function as a Service or “FaaS”.
+
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
-The best known vendor host is currently [AWS Lambda](https://aws.amazon.com/lambda/). AWS Lambda is excelent service and I advise you to try it. Here, we will focus on open source solutions with the possibility of a private-cloud infrastructure instalation.
+The best known vendor host is currently [AWS Lambda](https://aws.amazon.com/lambda/).
 
 Important attributes of serverless are:
 
@@ -10,10 +12,23 @@ Important attributes of serverless are:
  - Self auto provision & auto-scale based on load
  - Costs based on actual, precise, usage
  
+## FaaS in private clouds
 
-## OpenWhisk
+FaaS in private clouds is not quite ready yet. Existing projects need to mature, a lot of considerations still need to be worked.
+Existing projects out there are [IronFunctions](https://github.com/iron-io/functions), IBM’s [OpenWhisk](https://github.com/openwhisk/openwhisk), [GalacticFog](http://www.galacticfog.com), [Fission](https://github.com/fission/fission), [FAAS-for-docker](https://github.com/alexellis/faas)...
 
-Apache OpenWhisk is a serverless, open source cloud platform that executes functions in response to events at any scale. Browse the [documentation](https://github.com/openwhisk/openwhisk) for more information.
+## [Spring Cloud Function](https://github.com/markfisher/spring-cloud-function)
+
+Spring Cloud Function provides a new programming model for Spring Boot applications, abstracting away all of the transport details and infrastructure, allowing the developer to keep all the familiar tools and processes, and focus firmly on business logic.
+
+Spring Cloud Function has 4 main features:
+
+- Wrappers for @Beans of type Function, Consumer and Supplier, exposing them to the outside world as either HTTP endpoints and/or message stream listeners/publishers with RabbitMQ, Kafka etc.
+- Compiling strings which are Java function bodies into bytecode, and then turning them into @Beans that can be wrapped as above.
+- Deploying a JAR file containing such an application context with an isolated classloader, so that you can pack them together in a single JVM.
+- Adapters for AWS Lambda, and possibly other "serverless" service providers.
+
+
 
 ## Slides
 
