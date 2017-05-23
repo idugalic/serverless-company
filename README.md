@@ -32,7 +32,7 @@ Spring Cloud Function provides a new programming model for Spring Boot applicati
 Spring Cloud Function has 4 main features:
 
 - Wrappers for @Beans of type Function, Consumer and Supplier, exposing them to the outside world as either HTTP endpoints and/or message stream listeners/publishers with RabbitMQ, Kafka etc.
-- Compiling strings which are Java function bodies into bytecode, and then turning them into @Beans that can be wrapped as above.
+- Compiling strings which are Java function bodies into bytecode, and then turning them into @Beans.
 - Deploying a JAR file containing such an application context with an isolated classloader, so that you can pack them together in a single JVM.
 - Adapters for AWS Lambda, and possibly other "serverless" service providers.
 
