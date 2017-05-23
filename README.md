@@ -33,4 +33,5 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 - https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/
 - https://github.com/anaibol/awesome-serverless
 - https://github.com/lambci/docker-lambda
+- https://github.com/fission/fission
 
