@@ -34,4 +34,6 @@ Apache OpenWhisk is a serverless, open source cloud platform that executes funct
 - https://github.com/anaibol/awesome-serverless
 - https://github.com/lambci/docker-lambda
 - https://github.com/fission/fission
+- https://speakerdeck.com/dsyer/spring-cloud-function
+
 
