@@ -17,12 +17,12 @@ Important attributes of serverless are:
 FaaS in private clouds is not quite ready yet. Existing projects need to mature, a lot of considerations still need to be worked.
 Existing projects out there are:
 
-- [IronFunctions](https://github.com/iron-io/functions), 
 - IBM’s [OpenWhisk incubating project at the ASF](https://github.com/openwhisk/openwhisk), 
-- [GalacticFog](http://www.galacticfog.com), 
-- [Fission from Platform9](https://github.com/fission/fission), 
 - [Kubeless](https://github.com/kubeless/kubeless), 
 - [Funktion from Fabric8](https://github.com/funktionio/funktion), 
+- [Fission from Platform9](https://github.com/fission/fission), 
+- [GalacticFog](http://www.galacticfog.com), 
+- [IronFunctions](https://github.com/iron-io/functions), 
 - [FAAS-for-docker](https://github.com/alexellis/faas)...
 
 ## [Spring Cloud Function](https://github.com/markfisher/spring-cloud-function)
