@@ -36,6 +36,33 @@ Spring Cloud Function has 4 main features:
 - Deploying a JAR file containing such an application context with an isolated classloader, so that you can pack them together in a single JVM.
 - Adapters for AWS Lambda, and possibly other "serverless" service providers.
 
+The @Beans can be Function, Consumer or Supplier (all from java.util), and their parametric types can be String or POJO. A Function is exposed as an HTTP POST if spring-cloud-function-web is on the classpath, and as a Spring Cloud Stream Processor if spring-cloud-function-stream is on the classpath and a spring.cloud.function.stream.endpoint property is configured in the Spring environment. A Consumer is also exposed as an HTTP POST, or as a Stream Sink. A Supplier translates to an HTTP GET, or a Stream Source.
+
+
+## Building and Running a Function
+
+Build from the command line (and "install" the samples):
+
+```
+$ ./mvnw clean install
+$ ./mvnw spring-boot:run
+```
+
+This runs the application and exposes its functions over HTTP, so you can convert a string to uppercase, like this:
+
+```
+$ curl -H "Content-Type: text/plain" localhost:8080/uppercase -d Hello
+HELLO
+```
+
+You can convert multiple strings (a `Flux<String>`) by separating them
+with new lines
+
+```
+$ curl -H "Content-Type: text/plain" localhost:8080/uppercase -d 'Hello
+> World'
+HELLOWORLD
+```
 
 
 ## Slides
