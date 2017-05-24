@@ -4,11 +4,11 @@ This project is intended to demonstrate best practices for building a serverless
 
 ## Table of Contents
 
-	* [FaaS in private clouds](#faas-in-private-clouds)
-    * [Spring Cloud Function](#spring-cloud-function)
-    * [Building and Running a Function](#building-and-running-a-function)
-    * [Slides](#slides)
-    * [References and further reading](#references-and-further-reading)
+  * [FaaS in private clouds](#faas-in-private-clouds)
+  * [Spring Cloud Function](#spring-cloud-function)
+  * [Building and Running a Function](#building-and-running-a-function)
+  * [Slides](#slides)
+  * [References and further reading](#references-and-further-reading)
 
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
