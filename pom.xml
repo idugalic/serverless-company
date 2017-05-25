@@ -14,7 +14,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
 
 	<properties>
@@ -121,5 +121,18 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>idugalic-releases</id>
+			<name>idugalic-releases</name>
+			<url>http://maven.idugalic.pro/artifactory/local-repository</url>
+		</repository>
+		<snapshotRepository>
+			<id>idugalic-snapshots</id>
+			<name>idugalic-snapshots</name>
+			<url>http://maven.idugalic.pro/artifactory/local-repository</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>

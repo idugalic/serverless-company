@@ -1,4 +1,17 @@
 language: java
 jdk:
   - oraclejdk8
+sudo: required
+services:
+  - docker
 
+cache:
+  directories:
+    - $HOME/.m2/repository/
+
+deploy:
+  - provider: script
+    script: "mvn -s .travis.settings.xml -DskipTests deploy"
+    skip_cleanup: true
+    on:
+      branch: master
