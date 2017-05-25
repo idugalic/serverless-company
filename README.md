@@ -1,14 +1,15 @@
-# [projects](http://idugalic.github.io/projects)/serverless-company [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
+# [projects](http://idugalic.github.io/projects)/serverless-company [![Build Status](https://travis-ci.org/idugalic/serverless-company.svg?branch=master)](https://travis-ci.org/idugalic/serverless-company) [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
 
-This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. Focus is on the Function as a Service or “FaaS”.
 
 ## Table of Contents
 
-	* [FaaS in private clouds](#faas-in-private-clouds)
-    * [Spring Cloud Function](#spring-cloud-function)
-    * [Building and Running a Function](#building-and-running-a-function)
-    * [Slides](#slides)
-    * [References and further reading](#references-and-further-reading)
+  * [FaaS in private clouds](#faas-in-private-clouds)
+  * [Spring Cloud Function](#spring-cloud-function)
+  * [Building and Running a Function](#building-and-running-a-function)
+  * [Slides](#slides)
+  * [References and further reading](#references-and-further-reading)
+
+This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. Focus is on the Function as a Service or “FaaS”.
 
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
