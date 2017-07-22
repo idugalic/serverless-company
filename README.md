@@ -48,23 +48,45 @@ Spring Cloud Function has 4 main features:
 The @Beans can be Function, Consumer or Supplier (all from java.util), and their parametric types can be String or POJO. A Function is exposed as an HTTP POST if spring-cloud-function-web is on the classpath, and as a Spring Cloud Stream Processor if spring-cloud-function-stream is on the classpath and a spring.cloud.function.stream.endpoint property is configured in the Spring environment. A Consumer is also exposed as an HTTP POST, or as a Stream Sink. A Supplier translates to an HTTP GET, or a Stream Source.
 
 
-## Building and Running a Function on AWS
+## Building and Running a Function
 
-### Creating a package
+```
+$ cd serverless-company
+$ mvn clean install
+```
 
-This project uses an [adapter layer for a Spring Cloud Function application onto AWS Lambda](https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-aws) - spring-cloud-function-adapter-aws.
+### [Locally](https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions)
+
+To deploy the Uppercase function as a REST endpoint only requires adding the “spring-cloud-function-web” dependency
+
+```
+$ cd serverless-company/serverless-company-functions
+$ mvn spring-boot:run
+```
+```
+$ curl -H "Content-Type: text/plain" localhost:8080/uppercaseFunction -d '{"input":"Hello"}'
+```
+
+Expected result would be:
+```
+{"result":"HELLO"}
+```
+### [AWS Lambda](https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws)
+
+This module uses an [adapter layer for a Spring Cloud Function application onto AWS Lambda](https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-aws) - spring-cloud-function-adapter-aws.
 
 The AWS Adapter has a couple of different request handlers you can use like SpringBootRequestHandler, SpringBootStreamHandler, FunctionInvokingS3EventHandler, and so on. If you check the source code of SpringBootRequestHandler, you will see that it instead implements AWS's RequestHandler for us and also propagates the request to our function. The only reason we need to implement it is to specify the type of the input and the output parameters of the function, so AWS can serialize/deserialize them for us.
 
-Build from the command line (and "install" the samples):
+Build and package from the command line:
 
 ```
+$ cd serverless-company/serverless-company-aws
 $ ./mvnw clean package
 ```
 
-### Deploying a function to AWS (Lambda)
+#### Deploying a function to AWS
 
-#### AWS console
+##### AWS console
 
 After a successful build and package, if you navigate to the target directory, you will see two JARs, including one ending with -aws
 
@@ -76,7 +98,7 @@ com.idugalic.handler.UppercaseFunctionHandler
 
 TO BE CONTINUED ...
 
-#### AWS CLI
+##### AWS CLI
 
 TO BE CONTINUED ...
 
