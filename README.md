@@ -9,7 +9,7 @@
   * [Slides](#slides)
   * [References and further reading](#references-and-further-reading)
 
-This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. Focus is on the Function as a Service or “FaaS”.
+This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. 
 
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
@@ -36,7 +36,7 @@ Existing projects out there are:
 
 ## [Spring Cloud Function](https://github.com/markfisher/spring-cloud-function)
 
-Spring Cloud Function provides a new programming model for Spring Boot applications, abstracting away all of the transport details and infrastructure, allowing the developer to keep all the familiar tools and processes, and focus firmly on business logic.
+Spring Cloud Function provides a new programming model for Spring Boot applications, abstracting away all of the transport details and infrastructure, allowing the developer to keep all the familiar tools and processes, and focus firmly on business logic. It helps you create decoupled functions for serverless hosting providers (like AWS Lambda) or any other runtime target without vendor lock-in.
 
 Spring Cloud Function has 4 main features:
 
@@ -95,4 +95,5 @@ HELLOWORLD
 - https://github.com/fission/fission
 - https://speakerdeck.com/dsyer/spring-cloud-function
 - https://github.com/markfisher/spring-cloud-function
+- https://dzone.com/articles/run-code-with-spring-cloud-function-on-aws-lambda
 
