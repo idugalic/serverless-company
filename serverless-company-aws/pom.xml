@@ -15,7 +15,7 @@
 	</parent>
 
 	<properties>
-		<start-class>com.idugalic.aws.SampleApplication</start-class>
+		<start-class>com.idugalic.SampleApplication</start-class>
 		<reactor.version>3.0.7.RELEASE</reactor.version>
 	</properties>
 
@@ -59,6 +59,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework.boot.experimental</groupId>
+						<artifactId>spring-boot-thin-layout</artifactId>
+						<version>1.0.6.BUILD-SNAPSHOT</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
