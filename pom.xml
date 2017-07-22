@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.idugalic</groupId>
-	<artifactId>serverless-company</artifactId>
+	<artifactId>serverless-company-parent</artifactId>
 	<version>1.0.0.BUILD-SNAPSHOT</version>
-	<packaging>jar</packaging>
-	<name>Serverless Company</name>
+	<packaging>pom</packaging>
+	<name>Serverless Company Parent</name>
 	<description>Sample appication - Spring Cloud Function</description>
 
 	<parent>
@@ -16,39 +16,49 @@
 		<version>1.5.4.RELEASE</version>
 		<relativePath />
 	</parent>
+	
+	<modules>
+		<module>serverless-company-functions</module>
+		<module>serverless-company-aws</module>
+	</modules>
 
 	<properties>
-		<start-class>com.idugalic.SampleApplication</start-class>
 		<reactor.version>3.0.7.RELEASE</reactor.version>
+		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-function-adapter-aws</artifactId>
-			<version>1.0.0.BUILD-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-lambda-java-events</artifactId>
-			<version>1.2.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-lambda-java-log4j</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
+			
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-function-adapter-aws</artifactId>
+				<version>1.0.0.BUILD-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-function-context</artifactId>
+				<version>1.0.0.BUILD-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.amazonaws</groupId>
+				<artifactId>aws-lambda-java-events</artifactId>
+				<version>1.2.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.amazonaws</groupId>
+				<artifactId>aws-lambda-java-log4j</artifactId>
+				<version>1.0.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring-boot.version}</version>
+				<scope>test</scope>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -72,22 +82,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>org.springframework.boot.experimental</groupId>
-						<artifactId>spring-boot-thin-layout</artifactId>
-						<version>1.0.6.BUILD-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<configuration>
-					<createDependencyReducedPom>false</createDependencyReducedPom>
-					<shadedArtifactAttached>true</shadedArtifactAttached>
-					<shadedClassifierName>aws</shadedClassifierName>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
