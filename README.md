@@ -5,7 +5,7 @@
 
   * [FaaS in private clouds](#faas-in-private-clouds)
   * [Spring Cloud Function](#spring-cloud-function)
-  * [Building and Running a Function](#building-and-running-a-function)
+  * [Building and Running a Function on AWS](#building-and-running-a-function-on-aws)
   * [Slides](#slides)
   * [References and further reading](#references-and-further-reading)
 
