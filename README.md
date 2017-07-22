@@ -48,31 +48,37 @@ Spring Cloud Function has 4 main features:
 The @Beans can be Function, Consumer or Supplier (all from java.util), and their parametric types can be String or POJO. A Function is exposed as an HTTP POST if spring-cloud-function-web is on the classpath, and as a Spring Cloud Stream Processor if spring-cloud-function-stream is on the classpath and a spring.cloud.function.stream.endpoint property is configured in the Spring environment. A Consumer is also exposed as an HTTP POST, or as a Stream Sink. A Supplier translates to an HTTP GET, or a Stream Source.
 
 
-## Building and Running a Function
+## Building and Running a Function on AWS
+
+### Creating a package
+
+This project uses an [adapter layer for a Spring Cloud Function application onto AWS Lambda](https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-aws) - spring-cloud-function-adapter-aws.
+
+The AWS Adapter has a couple of different request handlers you can use like SpringBootRequestHandler, SpringBootStreamHandler, FunctionInvokingS3EventHandler, and so on. If you check the source code of SpringBootRequestHandler, you will see that it instead implements AWS's RequestHandler for us and also propagates the request to our function. The only reason we need to implement it is to specify the type of the input and the output parameters of the function, so AWS can serialize/deserialize them for us.
 
 Build from the command line (and "install" the samples):
 
 ```
-$ ./mvnw clean install
-$ ./mvnw spring-boot:run
+$ ./mvnw clean package
 ```
 
-This runs the application and exposes its functions over HTTP, so you can convert a string to uppercase, like this:
+### Deploying a function to AWS (Lambda)
 
-```
-$ curl -H "Content-Type: text/plain" localhost:8080/uppercase -d Hello
-HELLO
-```
+#### AWS console
 
-You can convert multiple strings (a `Flux<String>`) by separating them
-with new lines
+After a successful build and package, if you navigate to the target directory, you will see two JARs, including one ending with -aws
 
-```
-$ curl -H "Content-Type: text/plain" localhost:8080/uppercase -d 'Hello
-> World'
-HELLOWORLD
-```
+Let's fire up the AWS Console and navigate to the Lambda service's page. Click on "Create a Lambda function" and select "Blank Function." We don't need any trigger for the function because it will be triggered by API Gateway and we will setup that later on so for now just click on "Next."
 
+On the next page, you need to give a name for your function. I simply gave it "uppercase-function" but you can use anything else. But you need to remember it because it will be required for the setup of API Gateway. For the runtime set "Java 8." Drop the JAR ending with -aws on the upload button. For the lambda function handler, set:
+
+com.idugalic.handler.UppercaseFunctionHandler
+
+TO BE CONTINUED ...
+
+#### AWS CLI
+
+TO BE CONTINUED ...
 
 ## Slides
 
