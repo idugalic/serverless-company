@@ -46,12 +46,30 @@ public interface Supplier<T> {
 
 
 +++
-### Spring Cloud Function
+### [Spring Cloud Function](https://github.com/idugalic/serverless-company/blob/master/serverless-company-functions/src/main/java/com/idugalic/function/functions/UppercaseFunction.java)
+
 
 ```
-sample
+public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
+
+	private final UppercaseService uppercaseService;
+
+	public UppercaseFunction(final UppercaseService uppercaseService) {
+		this.uppercaseService = uppercaseService;
+	}
+
+	@Override
+	public UppercaseResponse apply(final UppercaseRequest uppercaseRequest) {
+		final UppercaseResponse result = new UppercaseResponse();
+
+		result.setResult(uppercaseService.uppercase(uppercaseRequest.getInput()));
+
+		return result;
+	}
+}
 ```
 
+---
 
 ### References and further reading
 
