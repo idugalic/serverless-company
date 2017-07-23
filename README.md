@@ -48,12 +48,16 @@ Existing projects out there are:
 
 Spring Cloud Function provides a new programming model for Spring Boot applications, abstracting away all of the transport details and infrastructure, allowing the developer to keep all the familiar tools and processes, and focus firmly on business logic. It helps you create decoupled functions for serverless hosting providers (like AWS Lambda) or any other runtime target without vendor lock-in.
 
-Spring Cloud Function has 4 main features:
+Spring Cloud Function is a project with the following high-level goals:
 
-- Wrappers for @Beans of type Function, Consumer and Supplier, exposing them to the outside world as either HTTP endpoints and/or message stream listeners/publishers with RabbitMQ, Kafka etc.
-- Compiling strings which are Java function bodies into bytecode, and then turning them into @Beans.
-- Deploying a JAR file containing such an application context with an isolated classloader, so that you can pack them together in a single JVM.
-- Adapters for AWS Lambda, and possibly other "serverless" service providers.
+- Promote the implementation of business logic via functions.
+
+- Decouple the development lifecycle of business logic from any specific runtime target so that the same code can run as a web endpoint, a stream processor, or a task.
+
+- Support a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).
+
+- Enable Spring Boot features (auto-configuration, dependency injection, metrics) on serverless providers.
+
 
 The @Beans can be Function, Consumer or Supplier (all from java.util), and their parametric types can be String or POJO. A Function is exposed as an HTTP POST if spring-cloud-function-web is on the classpath, and as a Spring Cloud Stream Processor if spring-cloud-function-stream is on the classpath and a spring.cloud.function.stream.endpoint property is configured in the Spring environment. A Consumer is also exposed as an HTTP POST, or as a Stream Sink. A Supplier translates to an HTTP GET, or a Stream Source.
 
@@ -65,7 +69,7 @@ $ cd serverless-company
 $ mvn clean install
 ```
 
-### [Locally](https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions)
+### [Locally (Standalone)](https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions)
 
 To deploy the Uppercase function as a REST endpoint only requires adding the “spring-cloud-function-web” dependency
 
@@ -104,13 +108,33 @@ Let's fire up the AWS Console and navigate to the Lambda service's page. Click o
 
 On the next page, you need to give a name for your function. I simply gave it "uppercase-function" but you can use anything else. But you need to remember it because it will be required for the setup of API Gateway. For the runtime set "Java 8." Drop the JAR ending with -aws on the upload button. For the lambda function handler, set:
 
-com.idugalic.handler.UppercaseFunctionHandler
+- Handler: com.idugalic.handler.UppercaseFunctionHandler
+- Role: uppercase-role
+- Runtime: Java 8
+- Advanced->Memory(MB): 320
+- Advanced->Timeout: 1 min	
 
-TO BE CONTINUED ...
+Input test:
+```
+{
+  "input": "test"
+}
+```
+Run test:
+```
+{
+  "result": "TEST"
+}
+```
+
 
 ##### AWS CLI
 
-TO BE CONTINUED ...
+- Install AWS CLI: http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html
+- Create the function:
+```
+$ aws lambda create-function --function-name uppercase-sample --role arn:aws:iam::[USERID]:role/service-role/[ROLE] --zip-file fileb://serverless-company/serverless-company-aws/target/serverless-company-aws-1.0.0.BUILD-SNAPSHOT-aws.jar --handler com.idugalic.handler.UppercaseFunctionHandler --description "Spring Cloud Function AWS Adapter Example" --runtime java8 --region eu-central-1 --timeout 30 --memory-size 1024 --publish
+```
 
 ### [Apache Openwhisk](https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk)
 
