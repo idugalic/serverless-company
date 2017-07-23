@@ -2,20 +2,20 @@
 
 ## Table of Contents
 
-      * [FaaS in private clouds](#faas-in-private-clouds)
-      * [<a href="https://github.com/markfisher/spring-cloud-function">Spring Cloud Function</a>](#spring-cloud-function)
-      * [Building and Running a Function](#building-and-running-a-function)
-         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions">Locally</a>](#locally)
-         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws">AWS Lambda</a>](#aws-lambda)
-            * [Deploying a function to AWS](#deploying-a-function-to-aws)
-               * [AWS console](#aws-console)
-               * [AWS CLI](#aws-cli)
-         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk">Apache Openwhisk</a>](#apache-openwhisk)
-            * [Install Openwhisk](#install-openwhisk)
-            * [Build docker images via maven](#build-docker-images-via-maven)
-            * [Create and invoke a function](#create-and-invoke-a-function)
-      * [Slides](#slides)
-      * [References and further reading](#references-and-further-reading)
+   * [FaaS in private clouds](#faas-in-private-clouds)
+   * [<a href="https://github.com/markfisher/spring-cloud-function">Spring Cloud Function</a>](#spring-cloud-function)
+   * [Building and Running a Function](#building-and-running-a-function)
+      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions">Locally</a>](#locally)
+      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws">AWS Lambda</a>](#aws-lambda)
+         * [Deploying a function to AWS](#deploying-a-function-to-aws)
+            * [AWS console](#aws-console)
+            * [AWS CLI](#aws-cli)
+      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk">Apache Openwhisk</a>](#apache-openwhisk)
+         * [Install Openwhisk](#install-openwhisk)
+         * [Build docker images via maven](#build-docker-images-via-maven)
+         * [Create and invoke a function](#create-and-invoke-a-function)
+   * [Slides](#slides)
+     * [References and further reading](#references-and-further-reading)
 
 
 
