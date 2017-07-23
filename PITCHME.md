@@ -48,8 +48,9 @@ public interface Supplier<T> {
 +++
 ### Spring Cloud Function
 
+---?code=serverless-company-functions/src//main/java/com/idugalic/function/functions/UppercaseFunction.java
 
----
+
 ### References and further reading
 
 - https://github.com/anaibol/awesome-serverless
