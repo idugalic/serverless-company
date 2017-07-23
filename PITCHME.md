@@ -15,3 +15,31 @@
 ### Cloud Computing
 <span style="color:gray">Service models</span>
 ![Cloud computing service models - Serverless](assets/1.png?raw=true)
+
+---
+### Serverless Providers
+
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- IBM’s [OpenWhisk incubating project at the ASF](https://github.com/openwhisk/openwhisk), 
+- [Kubeless](https://github.com/kubeless/kubeless), 
+- [Funktion from Fabric8](https://github.com/funktionio/funktion), 
+- [Fission from Platform9](https://github.com/fission/fission), 
+- [GalacticFog](http://www.galacticfog.com), 
+- [IronFunctions](https://github.com/iron-io/functions), 
+- [FAAS-for-docker](https://github.com/alexellis/faas)...
+
+---
+### Java Util Function
+```
+public interface Function<T, R> {
+    R apply(T t);
+}
+
+public interface Consumer<T> {
+    void accept(T t);
+}
+
+public interface Supplier<T> {
+    T get();
+}
+```
