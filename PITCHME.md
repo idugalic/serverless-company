@@ -45,10 +45,8 @@ public interface Supplier<T> {
 ```
 
 
-+++
+---
 ### Spring Cloud Function
-
-
 ```
 public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
 
