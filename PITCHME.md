@@ -54,11 +54,12 @@ public interface Supplier<T> {
 
 - Support a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).
 
-Enable Spring Boot features (auto-configuration, dependency injection, metrics) on serverless providers.
+- Enable Spring Boot features (auto-configuration, dependency injection, metrics) on serverless providers.
 
 +++
 ### Spring Cloud Function
 <span style="color:gray">Example</span>
+
 ```
 @Component("uppercaseFunction")
 public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
