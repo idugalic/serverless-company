@@ -46,7 +46,7 @@ public interface Supplier<T> {
 
 
 +++
-### [Spring Cloud Function](https://github.com/idugalic/serverless-company/blob/master/serverless-company-functions/src/main/java/com/idugalic/function/functions/UppercaseFunction.java)
+### Spring Cloud Function
 
 
 ```
