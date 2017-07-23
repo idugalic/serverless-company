@@ -1,13 +1,23 @@
 # [projects](http://idugalic.github.io/projects)/serverless-company [![Build Status](https://travis-ci.org/idugalic/serverless-company.svg?branch=master)](https://travis-ci.org/idugalic/serverless-company) [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
 
-
 ## Table of Contents
 
-  * [FaaS in private clouds](#faas-in-private-clouds)
-  * [Spring Cloud Function](#spring-cloud-function)
-  * [Building and Running a Function on AWS](#building-and-running-a-function-on-aws)
-  * [Slides](#slides)
-  * [References and further reading](#references-and-further-reading)
+      * [FaaS in private clouds](#faas-in-private-clouds)
+      * [<a href="https://github.com/markfisher/spring-cloud-function">Spring Cloud Function</a>](#spring-cloud-function)
+      * [Building and Running a Function](#building-and-running-a-function)
+         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions">Locally</a>](#locally)
+         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws">AWS Lambda</a>](#aws-lambda)
+            * [Deploying a function to AWS](#deploying-a-function-to-aws)
+               * [AWS console](#aws-console)
+               * [AWS CLI](#aws-cli)
+         * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk">Apache Openwhisk</a>](#apache-openwhisk)
+            * [Install Openwhisk](#install-openwhisk)
+            * [Build docker images via maven](#build-docker-images-via-maven)
+            * [Create and invoke a function](#create-and-invoke-a-function)
+      * [Slides](#slides)
+      * [References and further reading](#references-and-further-reading)
+
+
 
 This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. 
 
@@ -123,19 +133,20 @@ $ ./hello
 
 #### Build docker images via maven
 
+Requires username and password of docker repository
+
 ```
 $ cd serverless-company
 $ mvn clean install
-$ DOCKER_HOST=unix:///var/run/docker.sock mvn docker:build
-```
-
-or to build and push images via maven (requires username and password of docker repo):
-
-```bash
 $ DOCKER_HOST=unix:///var/run/docker.sock mvn docker:build -DpushImage
 ```
 
-TO BE CONTINUED ...
+#### Create and invoke a function
+```
+$ vagrant ssh
+$ wsk action create example --docker idugalic/serverless-company-openwhisk
+$ wsk action invoke example --result --param uppercaseRequest '{"input":"foo"}'
+```
 
 ## Slides
 

@@ -27,7 +27,7 @@
 		<reactor.version>3.0.7.RELEASE</reactor.version>
 		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 		<spring-cloud-function.version>1.0.0.BUILD-SNAPSHOT</spring-cloud-function.version>
-		<docker.image.prefix>serverless</docker.image.prefix>
+		<docker.image.prefix>idugalic</docker.image.prefix>
 		<docker.plugin.version>0.4.9</docker.plugin.version>
 	</properties>
 
@@ -41,6 +41,11 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-function-adapter-aws</artifactId>
+				<version>${spring-cloud-function.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-function-adapter-openwhisk</artifactId>
 				<version>${spring-cloud-function.version}</version>
 			</dependency>
 			<dependency>
