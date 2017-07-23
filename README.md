@@ -155,9 +155,9 @@ $ cd openwhisk/tools/vagrant
 $ ./hello
 ```
 
-#### Build docker images via maven
+#### Build docker images via maven (optional)
 
-Requires username and password of docker repository
+Requires username and password of docker hub repository (so you can push an image). Please note that image is already publicly available here https://hub.docker.com/r/idugalic/serverless-company-openwhisk/ , and you do not need to create an image localy.
 
 ```
 $ cd serverless-company
