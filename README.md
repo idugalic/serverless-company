@@ -106,7 +106,7 @@ After a successful build and package, if you navigate to the target directory, y
 
 Let's fire up the AWS Console and navigate to the Lambda service's page. Click on "Create a Lambda function" and select "Blank Function." We don't need any trigger for the function because it will be triggered by API Gateway and we will setup that later on so for now just click on "Next."
 
-On the next page, you need to give a name for your function. I simply gave it "uppercase-function" but you can use anything else. But you need to remember it because it will be required for the setup of API Gateway. For the runtime set "Java 8." Drop the JAR ending with -aws on the upload button. For the lambda function handler, set:
+On the next page, you need to give a name for your function. I simply gave it "uppercase-function" but you can use anything else. But you need to remember it because it will be required for the setup of API Gateway. For the runtime set "Java 8." Drop the JAR ending with -aws on the upload button. Continue with the configuration:
 
 - Handler: com.idugalic.handler.UppercaseFunctionHandler
 - Role: uppercase-role
