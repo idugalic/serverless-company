@@ -43,3 +43,39 @@ public interface Supplier<T> {
     T get();
 }
 ```
++++
+### Spring Cloud Function
+
+- Spring Cloud Function is a project with the following high-level goals:
+
+- Promote the implementation of business logic via functions.
+
+- Decouple the development lifecycle of business logic from any specific runtime target so that the same code can run as a web endpoint, a stream processor, or a task.
+
+- Support a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).
+
+Enable Spring Boot features (auto-configuration, dependency injection, metrics) on serverless providers.
+
++++
+### Spring Cloud Function
+<span style="color:gray">Example</span>
+```
+@Component("uppercaseFunction")
+public class UppercaseFunction implements Function<UppercaseRequest, UppercaseResponse> {
+
+	private final UppercaseService uppercaseService;
+
+	public UppercaseFunction(final UppercaseService uppercaseService) {
+		this.uppercaseService = uppercaseService;
+	}
+
+	@Override
+	public UppercaseResponse apply(final UppercaseRequest uppercaseRequest) {
+		final UppercaseResponse result = new UppercaseResponse();
+
+		result.setResult(uppercaseService.uppercase(uppercaseRequest.getInput()));
+
+		return result;
+	}
+}
+```
