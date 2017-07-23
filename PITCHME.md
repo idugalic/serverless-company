@@ -68,4 +68,18 @@ public class UppercaseFunction implements Function<UppercaseRequest, UppercaseRe
 }
 ```
 
-+++
+---
+### References and further reading
+
+- https://github.com/anaibol/awesome-serverless
+- [Evolution of Business Logic from Monoliths through Microservices, to Functions](https://read.acloud.guru/evolution-of-business-logic-from-monoliths-through-microservices-to-functions-ff464b95a44d)
+- [Deploy your microservice (Amazon Web Services S3, API Gateway and Lambda)](https://www.youtube.com/watch?list=PLVe-2wcL84b8c09AKImmAISiEI6vPefON&v=6ZzGx79Nz4o)
+- http://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+- https://github.com/kbastani/event-stream-processing-microservices
+- http://openwhisk.org/
+- https://github.com/krook
+- [Functions as a Service (FaaS) with Docker swarm](http://blog.alexellis.io/functions-as-a-service)
+- https://medium.com/@pfernandom/serverless-for-private-clouds-or-managing-the-server-for-a-serverless-app-f9321e45a910
+- https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/
+
+---
