@@ -102,6 +102,41 @@ TO BE CONTINUED ...
 
 TO BE CONTINUED ...
 
+### [Apache Openwhisk](https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk)
+
+#### Install Openwhisk
+
+Download and install VirtualBox and Vagrant for your operating system and architecture.
+
+Follow these step to run your first OpenWhisk Action:
+
+```
+# Clone openwhisk
+$ git clone --depth=1 https://github.com/apache/incubator-openwhisk.git openwhisk
+
+# Change directory to tools/vagrant
+$ cd openwhisk/tools/vagrant
+
+# Run script to create vm and run hello action
+$ ./hello
+```
+
+#### Build docker images via maven
+
+```
+$ cd serverless-company
+$ mvn clean install
+$ DOCKER_HOST=unix:///var/run/docker.sock mvn docker:build
+```
+
+or to build and push images via maven (requires username and password of docker repo):
+
+```bash
+$ DOCKER_HOST=unix:///var/run/docker.sock mvn docker:build -DpushImage
+```
+
+TO BE CONTINUED ...
+
 ## Slides
 
 <iframe width='770' height='515' src='https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white' frameborder='0' allowfullscreen></iframe>
@@ -124,4 +159,4 @@ TO BE CONTINUED ...
 - https://speakerdeck.com/dsyer/spring-cloud-function
 - https://github.com/markfisher/spring-cloud-function
 - https://dzone.com/articles/run-code-with-spring-cloud-function-on-aws-lambda
-
+- https://github.com/apache/incubator-openwhisk
