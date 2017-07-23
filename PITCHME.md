@@ -46,7 +46,6 @@ public interface Supplier<T> {
 
 +++
 ### Spring Cloud Function
-<span style="color:gray">Example</span>
 
 ```
 @Component("uppercaseFunction")
