@@ -174,8 +174,7 @@ $ wsk action invoke example --result --param uppercaseRequest '{"input":"foo"}'
 
 ## Slides
 
-<iframe width='770' height='515' src='https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white' frameborder='0' allowfullscreen></iframe>
-
+https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white
 
 ## References and further reading
 
