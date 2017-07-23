@@ -3,14 +3,14 @@
 ## Table of Contents
 
    * [FaaS in private clouds](#faas-in-private-clouds)
-   * [<a href="https://github.com/markfisher/spring-cloud-function">Spring Cloud Function</a>](#spring-cloud-function)
+   * [Spring Cloud Function](#spring-cloud-function)
    * [Building and Running a Function](#building-and-running-a-function)
-      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions">Locally</a>](#locally)
-      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws">AWS Lambda</a>](#aws-lambda)
+      * [Locally](#locally)
+      * [AWS Lambda](#aws-lambda)
          * [Deploying a function to AWS](#deploying-a-function-to-aws)
             * [AWS console](#aws-console)
             * [AWS CLI](#aws-cli)
-      * [<a href="https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk">Apache Openwhisk</a>](#apache-openwhisk)
+      * [Apache Openwhisk](#apache-openwhisk)
          * [Install Openwhisk](#install-openwhisk)
          * [Build docker images via maven](#build-docker-images-via-maven)
          * [Create and invoke a function](#create-and-invoke-a-function)
@@ -19,7 +19,7 @@
 
 
 
-This project is intended to demonstrate best practices for building a serverless web application with help of [Spring](https://github.com/markfisher/spring-cloud-function) platform. 
+This project is intended to demonstrate best practices for building a serverless web application with help of [Spring Cloud Function project](https://github.com/markfisher/spring-cloud-function). 
 
 Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"). We will focus on FaaS.
 
