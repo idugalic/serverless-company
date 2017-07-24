@@ -7,7 +7,7 @@
    * [Building and Running a Function](#building-and-running-a-function)
       * [Locally](#locally)
       * [AWS Lambda](#aws-lambda)
-         * [AWS console](#aws-web-console)
+         * [AWS web console](#aws-web-console)
          * [AWS CLI](#aws-cli)
       * [Apache Openwhisk](#apache-openwhisk)
          * [Install Openwhisk](#install-openwhisk)
@@ -106,7 +106,7 @@ $ ./mvnw clean package
 
 After a successful build and package, if you navigate to the target directory, you will see two JARs, including one ending with -aws
 
-Let's fire up the AWS Console and navigate to the Lambda service's page. Click on "Create a Lambda function" and select "Blank Function." We don't need any trigger for the function because it will be triggered by API Gateway and we will setup that later on so for now just click on "Next."
+Let's fire up the [AWS Console](https://aws.amazon.com/console/) and navigate to the Lambda service's page. Click on "Create a Lambda function" and select "Blank Function." We don't need any trigger for the function because it will be triggered by API Gateway and we will setup that later on so for now just click on "Next."
 
 On the next page, you need to give a name for your function. I simply gave it "uppercase-function" but you can use anything else. But you need to remember it because it will be required for the setup of API Gateway. For the runtime set "Java 8." Drop the JAR ending with -aws on the upload button. Continue with the configuration:
 
