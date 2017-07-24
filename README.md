@@ -7,9 +7,8 @@
    * [Building and Running a Function](#building-and-running-a-function)
       * [Locally](#locally)
       * [AWS Lambda](#aws-lambda)
-         * [Deploying a function to AWS](#deploying-a-function-to-aws)
-            * [AWS console](#aws-console)
-            * [AWS CLI](#aws-cli)
+         * [AWS console](#aws-web-console)
+         * [AWS CLI](#aws-cli)
       * [Apache Openwhisk](#apache-openwhisk)
          * [Install Openwhisk](#install-openwhisk)
          * [Build docker images via maven](#build-docker-images-via-maven)
@@ -102,9 +101,8 @@ $ cd serverless-company/serverless-company-aws
 $ ./mvnw clean package
 ```
 
-#### Deploying a function to AWS Lambda
 
-##### AWS web console
+#### AWS web console
 
 After a successful build and package, if you navigate to the target directory, you will see two JARs, including one ending with -aws
 
@@ -132,7 +130,7 @@ Run test:
 ```
 
 
-##### AWS CLI
+#### AWS CLI
 
 - Install AWS CLI: http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html
 - Create the function:
