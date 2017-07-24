@@ -71,7 +71,9 @@ $ mvn clean install
 
 ### [Locally (Standalone)](https://github.com/idugalic/serverless-company/tree/master/serverless-company-functions)
 
-To deploy the Uppercase function as a REST endpoint only requires adding the “spring-cloud-function-web” dependency
+To deploy the Uppercase function as a REST endpoint only requires adding the “spring-cloud-function-web” dependency in your pom file.
+
+You are ready now to run your function as a spring boot application:
 
 ```
 $ cd serverless-company/serverless-company-functions
@@ -98,9 +100,9 @@ $ cd serverless-company/serverless-company-aws
 $ ./mvnw clean package
 ```
 
-#### Deploying a function to AWS
+#### Deploying a function to AWS Lambda
 
-##### AWS console
+##### AWS web console
 
 After a successful build and package, if you navigate to the target directory, you will see two JARs, including one ending with -aws
 
@@ -137,6 +139,12 @@ $ aws lambda create-function --function-name uppercase-sample --role arn:aws:iam
 ```
 
 ### [Apache Openwhisk](https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk)
+
+[Apache OpenWhisk](http://openwhisk.incubator.apache.org/) is a serverless event-based programming service and an Apache Incubator project.
+
+There is a public instance of Openwhisk hosted and run by [IBM Bluemix](https://www.ibm.com/cloud-computing/bluemix/openwhisk).
+
+For the purposes of this lab we will install it locally.
 
 #### Install Openwhisk
 
