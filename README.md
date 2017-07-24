@@ -146,7 +146,7 @@ $ aws lambda create-function --function-name uppercase-sample --role arn:aws:iam
 There is a public instance of Openwhisk hosted and run by [IBM Bluemix](https://www.ibm.com/cloud-computing/bluemix/openwhisk).
 For the purposes of this lab we will install it locally.
 
-This module uses an [adapter layer for a Spring Cloud Function application onto Openwhisk(https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-openwhisk) - spring-cloud-function-adapter-openwhisk.
+This module uses an [adapter layer for a Spring Cloud Function application onto Openwhisk](https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-openwhisk) - spring-cloud-function-adapter-openwhisk.
 
 
 #### Install Openwhisk
