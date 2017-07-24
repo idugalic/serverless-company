@@ -89,6 +89,8 @@ Expected result would be:
 ```
 ### [AWS Lambda](https://github.com/idugalic/serverless-company/tree/master/serverless-company-aws)
 
+[AWS Lambda](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html) is a compute service that lets you run code without provisioning or managing servers. AWS Lambda executes your code only when needed and scales automatically, from a few requests per day to thousands per second. You pay only for the compute time you consume
+
 This module uses an [adapter layer for a Spring Cloud Function application onto AWS Lambda](https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-aws) - spring-cloud-function-adapter-aws.
 
 The AWS Adapter has a couple of different request handlers you can use like SpringBootRequestHandler, SpringBootStreamHandler, FunctionInvokingS3EventHandler, and so on. If you check the source code of SpringBootRequestHandler, you will see that it instead implements AWS's RequestHandler for us and also propagates the request to our function. The only reason we need to implement it is to specify the type of the input and the output parameters of the function, so AWS can serialize/deserialize them for us.
@@ -141,10 +143,11 @@ $ aws lambda create-function --function-name uppercase-sample --role arn:aws:iam
 ### [Apache Openwhisk](https://github.com/idugalic/serverless-company/tree/master/serverless-company-openwhisk)
 
 [Apache OpenWhisk](http://openwhisk.incubator.apache.org/) is a serverless event-based programming service and an Apache Incubator project.
-
 There is a public instance of Openwhisk hosted and run by [IBM Bluemix](https://www.ibm.com/cloud-computing/bluemix/openwhisk).
-
 For the purposes of this lab we will install it locally.
+
+This module uses an [adapter layer for a Spring Cloud Function application onto Openwhisk(https://github.com/spring-cloud/spring-cloud-function/tree/master/spring-cloud-function-adapters/spring-cloud-function-adapter-openwhisk) - spring-cloud-function-adapter-openwhisk.
+
 
 #### Install Openwhisk
 
