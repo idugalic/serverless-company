@@ -26,7 +26,7 @@
 - [Fission from Platform9](https://github.com/fission/fission), 
 - [GalacticFog](http://www.galacticfog.com), 
 - [IronFunctions](https://github.com/iron-io/functions), 
-- [FAAS-for-docker](https://github.com/alexellis/faas)...
+- [OpenFaaS](https://github.com/alexellis/faas) - for Docker Swarm and Kubernetes
 
 ---
 ### Java Util Function
