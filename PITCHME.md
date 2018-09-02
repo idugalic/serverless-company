@@ -3,6 +3,8 @@
 
 <span style="color:gray">Lab</span>
 
+[https://github.com/idugalic/serverless-company](https://github.com/idugalic/serverless-company)
+
 ---
 ### MVC
 ![MVC](assets/2.png?raw=true)
@@ -65,3 +67,9 @@ https://github.com/idugalic/serverless-company/blob/master/serverless-company-fu
 - https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/
 
 ---
+### Thank you
+
+ - Ivan Dugalic
+ - [http://idugalic.pro/](http://idugalic.pro/)
+ - [https://twitter.com/idugalic](https://twitter.com/idugalic)
+ - [https://github.com/idugalic](https://github.com/idugalic)
