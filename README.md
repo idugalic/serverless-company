@@ -1,4 +1,4 @@
-# [projects](http://idugalic.github.io/projects)/serverless-company [![Build Status](https://travis-ci.org/idugalic/serverless-company.svg?branch=master)](https://travis-ci.org/idugalic/serverless-company) [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
+# [projects](http://idugalic.github.io/projects)/serverless-company ![Java CI with Maven](https://github.com/idugalic/serverless-company/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master) [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/idugalic/serverless-company/master?grs=github&t=white)
 
 ## Table of Contents
 
